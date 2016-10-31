@@ -67,6 +67,13 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: #333;
 }
+.content {
+    padding: 1em;
+}
+.content li {
+    list-style-type: none;
+    font-size: 1.1em;
+}
 header p,
 strong {
     font-weight: 700;
@@ -78,21 +85,17 @@ ul {
     margin: 1em 0;
     padding: 0 0 0 20px;
 }
+li img {
+    padding-right: 1em;
+}
 img {
     border: 0;
     max-width: 50%;
     min-width: 306px;
 }
-.content {
-    padding: 1em;
-}
-.content li {
-    list-style-type: none;
-    font-size: 1.1em;
-}
-li img {
-    padding-right: 1em;
-}
+
+
+
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
@@ -107,10 +110,23 @@ li img {
     src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://fonts.gstatic.com/s/opensans/v10/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+@media only screen and (max-width: 480px) {
+  body { font-size: 12px;}
+  header p { padding-left: 4.5em;}
+ li img { display: none; }
+}
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important;}
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
     </style>
 </div>
-<link href=css/print.css media=print rel=stylesheet>
-<link href=css/smartphones.css media=handheld rel=stylesheet async>
 <script>
     ! function(e, n) {
         e.GoogleAnalyticsObject = n, e[n] = e[n] || function() {
