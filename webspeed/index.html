@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta charset=utf-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<meta content=" Webspeed optimisation " name=description>
+<meta content=" Jon Collins " name=author>
+<title>Jon-Collins- Portfolio</title>
+<header><a href=/><img data-pagespeed-no-defer src=img/jon.png>
+    </a>
+    <p>Jon Collins
+        <br><span>Udacity Student</span>
+</header>
+<div class=container>
+    <div class=hero><strong>I am learning FEND!</strong> I have been following the Udacity FEND (Front End Web Development course in my spare time in order to polish my FE skills and bring those skills to the Marketplace. So far all has been going well and in this project - using this template I will attempt to maximy the perfomance of this underperfoming website) :)
+        <br>Contact me: jon.collins71@gmail.com</div>
+    <div class=content>
+        <ul>
+            <li><img data-pagespeed-no-defer src=img/hometown.gif> <a href=https://jcwd.github.io/The_hometown_app>News Blog</a>
+                <p>Created a fully responsive news blog
+                    <li><img data-pagespeed-no-defer src=img/video-games.gif> <a href=https://jcwd.github.io/Arcade_game>Classic Arcade Game</a>
+                        <p>Hey.. this class looks familiar.
+                            <li><img data-pagespeed-no-defer src=img/Resume.gif> <a href=https://jcwd.github.io/online-resume>Online Resume</a>
+                                <p>a project to create an online Resume using JS
+                                    <li><img data-pagespeed-no-defer src=img/pizzeria.png style=width:100px> <a href=views/pizza.html>Cam's Pizzeria</a>
+                                        <p>Who wants a performant pizza?</ul>
+    </div>
+    <footer>
+        <p>© Web Performance 2014 <span id=crp-stats></span>
+            <p>Google Pagespeed Score Mobile 86/100
+                <p>Google Pagespeed Score Desktop 93/100</footer>
+   
+</div>
+<script>
+    ! function(e, n) {
+        e.GoogleAnalyticsObject = n, e[n] = e[n] || function() {
+            (e[n].q = e[n].q || []).push(arguments)
+        }, e[n].l = 1 * new Date
+    }(window, "ga"), ga("create", "UA-XXXX-Y"), ga("send", "pageview")
+</script>
+<script async src=http://www.google-analytics.com/analytics.js></script>
+<script>
+    function logCRP() {
+        var o = window.performance.timing,
+            n = o.domContentLoadedEventStart - o.domLoading,
+            t = o.domComplete - o.domLoading,
+            d = document.getElementById("crp-stats");
+        d.textContent = "DCL: " + n + "ms, onload: " + t + "ms"
+    }
+    window.addEventListener("load", function(o) {
+        logCRP()
+    })
+</script>
